@@ -18,6 +18,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+/** 
+ * This is Killer Android 102 group app, tentatively titled 'To-Do!'.
+ */
+
 public class MainActivity extends AppCompatActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
