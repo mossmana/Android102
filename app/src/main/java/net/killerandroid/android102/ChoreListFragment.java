@@ -16,7 +16,8 @@ import java.util.List;
 /**
  * Created by mmossman on 10/20/15.
  */
-public class ChoreListFragment {
+public class ChoreListFragment extends ListFragment implements AdapterView.OnItemClickListener{
+    List<Chore>choreList = new ArrayList<>();
 
     public ChoreListFragment(){
     }
@@ -35,16 +36,31 @@ public class ChoreListFragment {
         super.onActivityCreated(savedInstanceState);
 
         // Generate and/or get some chore objects.
+        choreList.add(new Chore("Chore One"));
+        choreList.add(new Chore("Chore Two"));
+        choreList.add(new Chore("Chore Three"));
+        choreList.add(new Chore("Chore Four"));
+        choreList.add(new Chore("Chore Five"));
+        choreList.add(new Chore("Chore Six"));
+        choreList.add(new Chore("Chore Seven"));
+        choreList.add(new Chore("Chore Eight"));
+        choreList.add(new Chore("Chore Nine"));
 
 
 
         // Create a custom adapter.
 
+        ChoreAdapter choreAdapter = new ChoreAdapter(getActivity(), R.layout.chore_row, choreList);
+
 
         // set our custom adapter on this ListFragment.
 
+        setListAdapter(choreAdapter);
+
 
         // set a click listener to do something useful when an item row is clicked.
+        getListView().setOnItemClickListener(this);
+
 
 
     }
