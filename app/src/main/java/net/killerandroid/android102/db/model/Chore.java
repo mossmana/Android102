@@ -4,13 +4,19 @@ package net.killerandroid.android102.db.model;
  * Created by davidpos on 10/6/15.
  */
 public class Chore {
-private String chore;
 
-    public String getChore() {
-        return chore;
+    private String choreTitle;
+
+    public Chore(String title) {
+        setChoreTitle(title);
     }
 
-    public void setChore(String chore) {
-        this.chore = chore;
+    public String getChoreTitle() {
+        return choreTitle;
     }
+
+    public void setChoreTitle(String title) {
+        this.choreTitle = title;
+    }
+
 }

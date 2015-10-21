@@ -1,23 +1,18 @@
 package net.killerandroid.android102;
 
 import android.app.Activity;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.ActionBar;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.content.Context;
-import android.os.Build;
-import android.os.Bundle;
-import android.view.Gravity;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.v4.widget.DrawerLayout;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -53,7 +48,7 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         if (position == 0) {
-            fragmentTransaction.replace(R.id.container, new ChoreListFragment());
+            fragmentTransaction.replace(R.id.container, new ChoreListFragment()).commit();
         } else {
             fragmentTransaction.replace(R.id.container, PlaceholderFragment.newInstance(position + 1)).commit();
         }
@@ -62,7 +57,7 @@ public class MainActivity extends AppCompatActivity
     public void onSectionAttached(int number) {
         switch (number) {
             case 1:
-                mTitle = getString(R.string.chore_list);
+                mTitle = getString(R.string.chore_main_title);
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);

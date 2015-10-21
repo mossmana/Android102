@@ -38,7 +38,7 @@ public class TaskDataSource {
         mDatabase.beginTransaction();
         try {
             ContentValues values = new ContentValues();
-            values.put(TaskHelper.COLUMN_CHORE, chore.getChore());
+            values.put(TaskHelper.COLUMN_CHORE, chore.getChoreTitle());
 
         } finally {
             mDatabase.endTransaction();
