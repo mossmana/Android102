@@ -20,7 +20,28 @@ public class ChoreAdapter extends ArrayAdapter<Chore> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        
+        View v = convertView;
+
+        if (v == null) {
+            LayoutInflater vi;
+            vi = LayoutInflater.from(getContext());
+            v = vi.inflate(R.layout.chore_row, null, false);
+        }
+
+        Chore chore = getItem(position);
+
+        if (chore != null) {
+            TextView choreTitle = (TextView) v.findViewById(R.id.textview_title);
+
+            if (choreTitle != null) {
+                choreTitle.setText(chore.getChoreTitle());
+            }
+
+        }
+
+        return v;
+
+
     }
 
 }
