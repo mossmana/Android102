@@ -14,5 +14,6 @@
 
 
     <string name="action_refresh">Refresh</string>
+    <string name="chore_hint">Enter a chore</string>
 
 </resources>
