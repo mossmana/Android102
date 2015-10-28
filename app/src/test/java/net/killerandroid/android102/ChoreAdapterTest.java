@@ -32,44 +32,29 @@ public class ChoreAdapterTest {
 
     @Test
     public void setUp() throws Exception {
-        ArrayList<Chore> data = new ArrayList<>();
+        // Create mock data here
 
-        data.add(new Chore("Chore 1"));
-        data.add(new Chore("Chore 2"));
-        data.add(new Chore("Chore 3"));
 
-        adapter = new ChoreAdapter(RuntimeEnvironment.application, R.layout.chore_row, data);
+        // Create adapter object here
 
-        testGetItem();
-        testGetItemId();
-        testGetCount();
-        testGetView();
+
+        // Call test methods
 
     }
 
 
     public void testGetItem() {
-        assertEquals("Chore 1", adapter.getItem(0).getChoreTitle());
     }
 
     public void testGetItemId() {
-        assertFalse(adapter.getItemId(0) != 0);
     }
 
     public void testGetCount() {
-        assertEquals("Chore amount incorrect.", 3, adapter.getCount());
     }
 
-    // I have 3 views on my adapter, name, number and photo
+    // We have a list with rows of views.  Let's test one of those views.
     public void testGetView() {
-        View view = adapter.getView(0, null, null);
-
-        TextView name = (TextView) view.findViewById(R.id.textview_title);
-
-        assertNotNull("View is null. ", view);
-        assertNotNull("Name TextView is null. ", name);
-
-        assertEquals("Names doesn't match.", adapter.getItem(0).getChoreTitle(), name.getText());
     }
+
 
 }

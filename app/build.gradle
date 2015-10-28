@@ -6,8 +6,8 @@ android {
 
     defaultConfig {
         applicationId "net.killerandroid.android102"
-        minSdkVersion 18
-        targetSdkVersion 18
+        minSdkVersion 19
+        targetSdkVersion 21
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -60,7 +60,5 @@ idea {
         downloadJavadoc = true
         downloadSources = true
     }
+
 }
-
-
-
