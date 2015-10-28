@@ -40,8 +40,6 @@ public class ChoreAdapter extends ArrayAdapter<Chore> {
         }
 
         return v;
-
-
     }
 
 }
