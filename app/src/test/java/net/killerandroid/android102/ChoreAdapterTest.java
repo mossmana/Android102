@@ -1,21 +1,9 @@
 package net.killerandroid.android102;
 
-import android.view.View;
-import android.widget.TextView;
-
-import net.killerandroid.android102.db.model.Chore;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricGradleTestRunner;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
-
-import java.util.ArrayList;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
 
 /**
  * Created by amossman on 10/27/15.
@@ -23,12 +11,6 @@ import static org.junit.Assert.assertNotNull;
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class)
 public class ChoreAdapterTest {
-
-    private ChoreAdapter adapter;
-
-    public ChoreAdapterTest() {
-        super();
-    }
 
     @Test
     public void setUp() throws Exception {
